@@ -5,9 +5,9 @@ void setup()
   //pint 12 led verde
   pinMode(12,OUTPUT);
   //pint 9 led amarillo
-  pinMode(9,OUTPUT);
+  pinMode(11,OUTPUT);
   //pint 6 led rojo
-  pinMode(6,OUTPUT);
+  pinMode(10,OUTPUT);
 }
 
 void loop()
@@ -26,18 +26,26 @@ void loop()
   analogWrite(12,LOW);
   //led amarillo encender
   for(int i=0;i<255;i++){
-    analogWrite(9,i);
+    analogWrite(11,i);
     delay(stop);
   }
   //led amarillo apagado
-  analogWrite(9,LOW);
+  analogWrite(11,LOW);
   //led rojo encender
   for(int i=0;i<255;i++){
-    analogWrite(6,i);
+    analogWrite(10,i);
     delay(stop);
   }
-  analogWrite(6,LOW);
   //led rojo apagar
+  analogWrite(10,LOW);
+  //led amarillo encender
+  for(int i=0;i<255;i++){
+    analogWrite(11,i);
+    delay(stop);
+  }
+  //led amarillo apagado
+  analogWrite(11,LOW);
+  
   //esto seguira de manera repetitiva
 }
 
